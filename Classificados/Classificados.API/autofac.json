@@ -1,0 +1,18 @@
+{
+  "defaultAssembly": "Classificados.Infrastructure",
+  "modules": [
+    {
+      "type": "Classificados.API.ApiModule,Classificados.API",
+      "properties": {
+      }
+    },
+    {
+      "type": "Classificados.Infrastructure.ApplicationModule",
+      "properties": {
+      }
+    }
+    //{
+    //  "type": "Classificados.Infrastructure.InMemoryDataAccess.InMemoryModule"
+    //}
+  ]
+}
