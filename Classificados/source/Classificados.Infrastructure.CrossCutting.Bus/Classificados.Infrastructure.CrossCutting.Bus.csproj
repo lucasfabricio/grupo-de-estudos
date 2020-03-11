@@ -2,13 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <AssemblyName>Classificados.Domain</AssemblyName>
-    <RootNamespace>Classificados.Domain</RootNamespace>
   </PropertyGroup>
-
-  <ItemGroup>
-    <PackageReference Include="FluentValidation" Version="8.6.2" />
-  </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Classificados.Domain.Core\Classificados.Domain.Core.csproj" />
