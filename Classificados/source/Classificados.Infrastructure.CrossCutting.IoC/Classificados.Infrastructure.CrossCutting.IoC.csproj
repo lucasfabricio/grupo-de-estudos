@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="3.1.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Classificados.Application\Classificados.Application.csproj" />
+    <ProjectReference Include="..\Classificados.Domain\Classificados.Domain.csproj" />
+    <ProjectReference Include="..\Classificados.Infrastructure.CrossCutting.Bus\Classificados.Infrastructure.CrossCutting.Bus.csproj" />
+    <ProjectReference Include="..\Classificados.Infrastructure.CrossCutting.Identity\Classificados.Infrastructure.CrossCutting.Identity.csproj" />
+    <ProjectReference Include="..\Classificados.Infrastructure.EntityFramework\Classificados.Infrastructure.EntityFramework.csproj" />
+  </ItemGroup>
+
+</Project>
