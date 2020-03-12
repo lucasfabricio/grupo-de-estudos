@@ -50,18 +50,18 @@ namespace Classificados.Application.EventSourcedNormalizers
 
                 switch (e.MessageType)
                 {
-                    case nameof(CategoryCreatedEvent):
+                    case nameof(CategoryRegisteredEvent):
                         historyData.Action = "Created";
                         historyData.Who = e.User;
                         break;
-                    //case nameof(CategoryUpdatedEvent):
-                    //    historyData.Action = "Updated";
-                    //    historyData.Who = e.User;
-                    //    break;
-                    //case nameof(CategoryRemovedEvent):
-                    //    historyData.Action = "Removed";
-                    //    historyData.Who = e.User;
-                    //    break;
+                    case nameof(CategoryUpdatedEvent):
+                        historyData.Action = "Updated";
+                        historyData.Who = e.User;
+                        break;
+                    case nameof(CategoryRemovedEvent):
+                        historyData.Action = "Removed";
+                        historyData.Who = e.User;
+                        break;
                 }
                 HistoryData.Add(historyData);
             }

@@ -9,8 +9,14 @@ namespace Classificados.Application.AutoMapper
         public ViewModelToDomainMappingProfile()
         {
             //Category
-            CreateMap<CategoryViewModel, CreateNewCategoryCommand>()
-                .ConstructUsing(c => new CreateNewCategoryCommand(c.Name, c.ParentCategoryId));
+            CreateMap<CategoryViewModel, RegisterCategoryCommand>()
+                .ConstructUsing(c => new RegisterCategoryCommand(c.Name, c.ParentCategoryId));
+
+            CreateMap<CategoryViewModel, UpdateCategoryCommand>()
+                .ConstructUsing(c => new UpdateCategoryCommand(c.Id, c.Name, c.ParentCategoryId));
+
+            CreateMap<CategoryViewModel, RemoveCategoryCommand>()
+                .ConstructUsing(c => new RemoveCategoryCommand(c.Id));
         }
     }
 }

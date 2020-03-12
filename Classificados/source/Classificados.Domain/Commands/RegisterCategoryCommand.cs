@@ -3,9 +3,9 @@ using System;
 
 namespace Classificados.Domain.Commands
 {
-    public class CreateNewCategoryCommand : CategoryCommand
+    public class RegisterCategoryCommand : CategoryCommand
     {
-        public CreateNewCategoryCommand(string name, Guid? parentCategoryId = null)
+        public RegisterCategoryCommand(string name, Guid? parentCategoryId = null)
         {
             Name = name;
             ParentCategoryId = parentCategoryId;
@@ -13,7 +13,7 @@ namespace Classificados.Domain.Commands
 
         public override bool IsValid()
         {
-            ValidationResult = new CreateNewCategoryCommandValidation().Validate(this);
+            ValidationResult = new RegisterCategoryCommandValidation().Validate(this);
             return ValidationResult.IsValid;
         }
     }

@@ -42,20 +42,20 @@ namespace Classificados.Application.Services
 
         public void Register(CategoryViewModel CategoryViewModel)
         {
-            var registerCommand = _mapper.Map<CreateNewCategoryCommand>(CategoryViewModel);
+            var registerCommand = _mapper.Map<RegisterCategoryCommand>(CategoryViewModel);
             Bus.SendCommand(registerCommand);
         }
 
         public void Update(CategoryViewModel CategoryViewModel)
         {
-            //var updateCommand = _mapper.Map<UpdateCategoryCommand>(CategoryViewModel);
-            //Bus.SendCommand(updateCommand);
+            var updateCommand = _mapper.Map<UpdateCategoryCommand>(CategoryViewModel);
+            Bus.SendCommand(updateCommand);
         }
 
         public void Remove(Guid id)
         {
-            //var removeCommand = new RemoveCategoryCommand(id);
-            //Bus.SendCommand(removeCommand);
+            var removeCommand = new RemoveCategoryCommand(id);
+            Bus.SendCommand(removeCommand);
         }
 
         public IList<CategoryHistoryData> GetAllHistory(Guid id)

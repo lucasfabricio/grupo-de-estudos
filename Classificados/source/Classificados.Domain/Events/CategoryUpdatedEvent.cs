@@ -3,9 +3,9 @@ using System;
 
 namespace Classificados.Domain.Events
 {
-    public class CategoryCreatedEvent : Event
+    public class CategoryUpdatedEvent : Event
     {
-        public CategoryCreatedEvent(Guid id, string name, Guid? parentCategoryId = null)
+        public CategoryUpdatedEvent(Guid id, string name, Guid? parentCategoryId = null)
         {
             Id = id;
             Name = name;
