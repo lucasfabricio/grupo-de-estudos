@@ -37,10 +37,12 @@ namespace Classificados.Infrastructure.CrossCutting.IoC
 
             // Domain - Events
             services.AddScoped<INotificationHandler<DomainNotification>, DomainNotificationHandler>();
-            services.AddScoped<INotificationHandler<CategoryCreatedEvent>, CategoryEventHandler>();
+            services.AddScoped<INotificationHandler<CategoryRegisteredEvent>, CategoryEventHandler>();
 
             // Domain - Commands
-            services.AddScoped<IRequestHandler<CreateNewCategoryCommand, bool>, CategoryCommandHandler>();
+            services.AddScoped<IRequestHandler<RegisterCategoryCommand, bool>, CategoryCommandHandler>();
+            services.AddScoped<IRequestHandler<UpdateCategoryCommand, bool>, CategoryCommandHandler>();
+            services.AddScoped<IRequestHandler<RemoveCategoryCommand, bool>, CategoryCommandHandler>();
 
             // Infra - Data
             services.AddScoped<ICategoryRepository, CategoryRepository>();
