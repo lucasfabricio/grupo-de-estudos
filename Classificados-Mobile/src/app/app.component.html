@@ -38,25 +38,7 @@
 
 <!-- Content -->
 <div class="content" role="main">
-  <ul class="advertisements">
-    <li *ngFor="let advertisement of advertisements"
-      [class.selected]="advertisement === selectedAdvertisement"
-      (click)="onSelect(advertisement)">
-      <span class="badge">{{advertisement.id}}</span> {{advertisement.title}}
-    </li>
-  </ul>
   
-  <div *ngIf="selectedAdvertisement">
-  
-    <h2>{{selectedAdvertisement.title | uppercase}} Details</h2>
-    <div><span>id: </span>{{selectedAdvertisement.id}}</div>
-    <div>
-      <label>title:
-        <input [(ngModel)]="selectedAdvertisement.title" placeholder="title"/>
-      </label>
-    </div>
-  
-  </div>
 </div>
 
 
