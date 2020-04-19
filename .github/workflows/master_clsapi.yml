@@ -21,7 +21,7 @@ jobs:
         dotnet-version: '3.1.102'
 
     - name: Build with dotnet
-      run: dotnet build "../Classificados/source/Classificados.API/Classificados.API.csproj" --configuration Release
+      run: dotnet build '**/*Classificados/*source/*.csproj' --configuration Release
 
     - name: dotnet publish
       run: dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/myapp
