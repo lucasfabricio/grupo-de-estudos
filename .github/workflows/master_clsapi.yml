@@ -27,7 +27,7 @@ jobs:
       run: dotnet build Classificados/source/Classificados.API/Classificados.API.csproj --configuration Release
 
     - name: dotnet publish
-      run: dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/myapp
+      run: dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/clsapi
 
     - name: Deploy to Azure Web App
       uses: azure/webapps-deploy@v1
@@ -35,4 +35,4 @@ jobs:
         app-name: 'clsapi'
         slot-name: 'production'
         publish-profile: ${{ secrets.AzureAppService_PublishProfile_b308fb7ef3754a71afccfcdf9cfeb97e }}
-        package: ${{env.DOTNET_ROOT}}/myapp
+        package: ${{env.DOTNET_ROOT}}/clsapi
