@@ -32,4 +32,4 @@ jobs:
         app-name: 'clsapi'
         slot-name: 'production'
         publish-profile: ${{ secrets.AzureAppService_PublishProfile_b308fb7ef3754a71afccfcdf9cfeb97e }}
-        package: ${{env.DOTNET_ROOT}}/myapp 
+        package: ${{env.DOTNET_ROOT}}/myapp
